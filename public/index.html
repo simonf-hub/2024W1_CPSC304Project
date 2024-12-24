@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Identity V Game Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <div class="container">
+
+    <h1>Identity V Game Management System</h1>
+
+    <!-- A content display div -->
+    <h3>Output Window</h3>
+    <div id="contentDiv" class="content-div"></div>
+
+    <!-- Actions with User Input -->
+    <div class="section">
+      <div class="category">Actions with User Input</div>
+      <form id="insert-character-card">
+        <h3>Insert Character Card</h3>
+        <input type="text" id="cid" placeholder="Character Card ID" required>
+        <input type="text" id="price" placeholder="Price" required>
+        <input type="text" id="cName" placeholder="Character Name" required>
+        <input type="text" id="pid" placeholder="Player ID" required>
+        <button type="submit">Submit</button>
+      </form>
+
+      <form id="update-character">
+        <h3>Update Character</h3>
+        <input type="text" id="cNameUpdate" placeholder="Character Name" required>
+        <input type="text" id="speed" placeholder="Speed" required>
+        <input type="text" id="agility" placeholder="Agility" required>
+        <button type="submit">Submit</button>
+      </form>
+
+      <form id="delete-player">
+        <h3>Delete Player</h3>
+        <input type="text" id="pidDelete" placeholder="Player ID" required>
+        <button type="submit">Submit</button>
+      </form>
+
+      <form id="select-player">
+        <h3>Select Player</h3>
+        <input type="text" id="pidSelect" placeholder="Player ID" required>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- Talent -->
+   <div class="category">Talent Operations</div>
+   <button id="show-hunter-talents">Show Existing Hunter Talents</button>
+   <form id="update-talent">
+     <h3>Update Hunter Talent</h3>
+     <input type="text" id="taid" placeholder="Talent ID" required>
+     <input type="text" id="dread" placeholder="Dread" required>
+     <input type="text" id="vigilance" placeholder="Vigilance" required>
+     <input type="text" id="deceit" placeholder="Deceit" required>
+     <input type="text" id="strength" placeholder="Strength" required>
+     <input type="text" id="hunter-talent-pid" placeholder="Player ID" required>
+     <button type="submit">Submit</button>
+   </form>
+
+    <form id="avg-hunter-rank">
+      <h3>Average Hunter Rank in Server</h3>
+      <input type="text" id="sidHSelect" placeholder="Server ID" required>
+      <button type="submit">Submit</button>
+    </form>
+
+    <form id="avg-surv-rank">
+      <h3>Average Survivor Rank in Server</h3>
+      <input type="text" id="sidSSelect" placeholder="Server ID" required>
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="sub-category">Show Groups</div>
+    <form id="show-groups">
+      <input type="text" id="idGroup" placeholder="Enter ID" required>
+      <button id="join-team-player" name="action" value="team">Show Team Player Match</button>
+      <button id="join-guild-player" name="action" value="guild">Show Guild Player Match</button>
+      <button id="join-server-player" name="action" value="server">Show Server Player Match</button>
+    </form>
+
+
+    <!-- Quick Actions -->
+     <!-- TODO: 改名 -->
+    <div class="section">
+      <div class="category">Quick Actions</div>
+
+      <div class="sub-category">Show Stats</div>
+      <div class="button-group">
+        <button id="project-speed">Show Character Speed</button>
+        <button id="project-agility">Show Character Agility</button>
+      </div>
+
+      <div class="sub-category">Show Characters</div>
+      <div class="button-group">
+        <button id="all-hunters">Show All Hunters</button>
+        <button id="all-survivors">Show All Survivors</button>
+      </div>
+        
+
+      <div class="sub-category">Max Hunter</div>
+      <div class="button-group">
+        <button id="max-hunter-damage">Max Hunter Damage</button>
+        <button id="max-hunter-speed">Max Hunter Speed</button>
+        <button id="max-hunter-agility">Max Hunter Agility</button>
+      </div>
+
+      <div class="sub-category">Max Survivor</div>
+      <div class="button-group">
+        <button id="max-survivor-decode">Max Survivor Decode</button>
+        <button id="max-survivor-speed">Max Survivor Speed</button>
+        <button id="max-survivor-agility">Max Survivor Agility</button>
+      </div>
+
+      <div class="sub-category">Guild</div>
+      <div class="button-group">
+        <button id="guild-max-hunter-rank">Guild with Max Avg Hunter Rank</button>
+        <button id="guild-max-survivor-rank">Guild with Max Avg Survivor Rank</button>
+      </div>
+
+      <div class="sub-category">Server Stats</div>
+      <div class="button-group">
+        <button id="find-max-hunter-rank">Find Max Hunter Rank for Each Server</button>
+        <button id="find-max-surv-rank">Find Max Survivor Rank</button>
+      </div>
+
+      <div class="sub-category">Players With All Characters</div>
+      <div class="button-group">
+        <button id="division">Return Players with All Characters</button>
+      </div>
+    </div>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
